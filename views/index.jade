@@ -1,0 +1,29 @@
+html
+    head
+        script(src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+        script(src="/js/jq.js")
+        script(src="/js/audioVis.js")
+        link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/stylesheets/style.css")
+    body
+        div(class="container" style="text-align:center;")
+            h2 Views
+            span
+                div(class="radio")
+                    input(type="radio" id="bar" name="style" value="bars")
+                    | bars
+                div(class="radio")
+                    input(type="radio" id="circle" name="style" value="circle")
+                    | circle
+            //div(class="input-group")
+                //input(type="text" class="form-control" placeholder="Soundcloud URL here")
+                //span(class="input-group-btn")
+                  //  button(class="btn btn-default" type="button") Generate
+            div(id="audio-container" style="display:table; margin:0 auto;position:relative;")
+                audio(id="audiosrc" src="1.mp3" autoplay)
+                br
+                button(type="button" id="but" class="btn btn-default btn-circle btn-xl")
+                    i(class="glyphicon glyphicon-play play-button")
+                    i(class="glyphicon glyphicon-pause pause-button")
+                canvas(id="bars")
